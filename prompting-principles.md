@@ -2,7 +2,7 @@
 
 ## Principle 1: Write clear and specific instructions
 
-### Tactic 1. Use delimiters such as triple quotes ("""), triple bacticks (```), triple dashes (---), angle brackets (<>), or XML tags (`<tag></tag>`) 
+### Tactic 1. Use delimiters such as triple quotes, triple bactick, triple dashes, angle brackets, or XML tags.
 ```
 Example: 
 Summarize the below paragraph delimited by three dashes.
@@ -14,13 +14,16 @@ Summarize the below paragraph delimited by three dashes.
 ### Tactic 2. Ask for structued output.
 ```
 Example: 
-Generate a list of three made-up book titles along with their authors and genres. Provide them in JSON format with the following keys: book_id, title, author, genre.
+Generate a list of three made-up book titles along with 
+their authors and genres. Provide them in JSON format with 
+the following keys: book_id, title, author, genre.
 ```
 
 ### Tactic 3. Check wether conditions are satisfied.
 ```
 Example: 
-Check the paragraph for a sequence of instructions. If there are none, reply with "no instructions found".
+Check the paragraph for a sequence of instructions. If there 
+are none, reply with "no instructions found".
 ```
 
 ### Tactic 4. Few-shot prompting by providing successful examples of completing tasks then ask model to perform the task.
@@ -30,7 +33,10 @@ Your task is to answer in a consistent style.
 
 <child>: Teach me about patience.
 
-<grandparent>: The river that carves the deepest valley flows from a modest spring; the grandest symphony originates from a single note; the most intricate tapestry begins with a solitary thread.
+<grandparent>: The river that carves the deepest valley flows 
+from a modest spring; the grandest symphony originates from 
+a single note; the most intricate tapestry begins with a 
+solitary thread.
 
 <child>: Teach me about resilience.
 ```

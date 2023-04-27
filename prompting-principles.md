@@ -2,16 +2,17 @@
 
 ## Principle 1: Write clear and specific instructions
 
-### Tactic 1. Use delimiters such as triple quotes, triple bactick, triple dashes, angle brackets, or XML tags.
+* Tactic 1. Use delimiters.
 ```
 Example: 
-Summarize the below paragraph delimited by three dashes.
+Summarize the below paragraph delimited by the triple quotes.
 
----
+"""
 {text}
+"""
 ```
 
-### Tactic 2. Ask for structued output.
+* Tactic 2. Ask for structued output.
 ```
 Example: 
 Generate a list of three made-up book titles along with 
@@ -26,7 +27,7 @@ Check the paragraph for a sequence of instructions. If there
 are none, reply with "no instructions found".
 ```
 
-### Tactic 4. Few-shot prompting by providing successful examples of completing tasks then ask model to perform the task.
+### Tactic 4. Few-shot prompting.
 ```
 Example: 
 Your task is to answer in a consistent style.

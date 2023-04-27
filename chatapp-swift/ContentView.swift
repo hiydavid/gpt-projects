@@ -1,12 +1,16 @@
 //
-//  chatapp.swift
+//  ContentSwift.swift
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
-    @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
+    @State var chatMessages: [ChatMessage] = []
     @State var messageText: String = ""
+    
+    let openAIService = OpenAIService()
+    @State var cancellables = Set<AnyCancellable>()
     
     var body: some View {
         VStack{
@@ -51,8 +55,27 @@ struct ContentView: View {
     }
     
     func sendMessage() {
+        let myMessage = ChatMessage(
+            id: UUID().uuidString,
+            content: messageText,
+            dateCreated: Date(),
+            sender: .me)
+        chatMessages.append(myMessage)
+        openAIService.sendMessage(message: messageText).sink { completion in
+            // handle error
+        } receiveValue: { response in
+            guard let textResponse = response.choices.first?.text.trimmingCharacters(
+                in: .whitespacesAndNewlines.union(.init(charactersIn: "\""))) else { return }
+            let gptMessage = ChatMessage(
+                id: response.id,
+                content: textResponse,
+                dateCreated: Date(),
+                sender: .gpt)
+            chatMessages.append(gptMessage)
+        }
+        .store(in: &cancellables)
+        
         messageText = ""
-        print(messageText)
     }
     
 }

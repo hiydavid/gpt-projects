@@ -71,3 +71,11 @@ is correct or not. Don't decide if the student's solution is correct until you h
 the problem yourself.
 ```
 
+# Prompting Use Cases
+
+1. Iterative
+2. Summarizing
+3. Inferring
+4. Transforming
+5. Expanding
+

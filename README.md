@@ -1,3 +1,2 @@
-# Random Projects in Prompt Engineering
+# Random Projects in Using OpenAI API
 
-Going through this: https://learnprompting.org/

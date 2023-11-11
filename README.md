@@ -1,4 +1,5 @@
 # GPT Projects
 
 * Recipe Summarizer (WIP)
-* VG Investing Perspectives
+* Warren Buffet Letters (WIP)
+* 

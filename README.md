@@ -1,5 +1,5 @@
 # GPT Projects
 
 * Recipe Summarizer (WIP)
-* Warren Buffet Letters (WIP)
+* Buffet Insights (https://chat.openai.com/g/g-rxPnvLziE-buffet-insights)
 * 

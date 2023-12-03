@@ -1,0 +1,2 @@
+penai==0.27.2
+langchain==0.0.177
